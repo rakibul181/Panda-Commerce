@@ -41,3 +41,7 @@ document.getElementById('exampleInputEmail1').addEventListener('keyup', function
 })
 
 
+document.getElementById('subscribe-section').addEventListener('dblclick',function(addEventListener){
+    console.log('Click double')
+    document.getElementById('subscribe-section').style.setProperty('background-color', 'pink', 'important');
+})
