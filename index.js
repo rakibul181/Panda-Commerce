@@ -16,14 +16,28 @@ function submite(){
     console.log(' It is submited by successfully')
 }
 
-// const btnRemove = document.getElementById('backpack-element').addEventListener('click',function(event){
-//     event.target.parentNode.removeChild(event.target)
-// })
-const btnRemove = document.querySelectorAll('.btn-remove')
-// console.log(btnRemove)
-for(const btnR of btnRemove){
-    btnR.addEventListener('click', function(event){
-        console.log(event)
+// // const btnRemove = document.getElementById('backpack-element').addEventListener('click',function(event){
+// //     event.target.parentNode.removeChild(event.target)
+// // })
+// const btnRemove = document.querySelectorAll('.btn-remove')
+// // console.log(btnRemove)
+// for(const btnR of btnRemove){
+//     btnR.addEventListener('click', function(event){
+//         console.log(event)
         
-    })
-}
+//     })
+// }
+const submitBtn = document.getElementById('email-btn')
+submitBtn.setAttribute('disabled', true)
+
+document.getElementById('exampleInputEmail1').addEventListener('keyup', function(event){
+    const inputText = event.target.value
+    if(inputText ==='email'){
+        submitBtn.removeAttribute('disabled')
+    }
+    else{
+        submitBtn.setAttribute('disabled', true)
+    }
+})
+
+
